@@ -25,11 +25,12 @@ Also make sure you have no scripts in `\Team Fortress 2\tf\cfg` that have the sa
 You should update it regularly, and scan through the README.md to see if I have added something.
 
 ## Maps
-As you can see, I have a few aliasses that start up maps. You can only use them if you've downloaded the maps. It is optional, you don't have to download them.
-Those maps are
+As you can see, I have a few aliases that start up maps. You can only use them if you've downloaded the maps. It is optional, you don't have to download them.
+Those maps are:
 - tr_walkway_rc2
 - tr_aim
 - tr_aim_practice
+- tr_rocket_shooting2
 
 ## Keybinds
 
@@ -111,11 +112,32 @@ Most of these stayed the same.
 | F5 | Screenshot | |
 | F6 | Save replay | |
 | F7 | Fill in an abuse report | Use it when you spot a cheater. It is pretty self explanatory. |
-| F8 | Bug-fix button | If it's buggy, or something disappeared. Note: this will most likely freese your game for more than 10 seconds. Could disconnect you from game. |
+| F8 | Bug-fix button | If it's buggy, or something disappeared. Note: this will most likely freeze your game for more than 10 seconds. Could disconnect you from game. |
 | F9-F12 | Choose between presets. | Also use to quick respawn. |
 | ' | Demo bookmark | If you are recording a demo and want a bookmark, use this to bookmark. |
+| BACKSPACE | Reload class config | Reloads the current class configuration if something goes wrong. |
+| KP_PLUS (+) | Lenny face | Outputs a lenny face in chat. ( ͡° ͜ʖ ͡°) |
+| KP_SLASH (/) | LMAOBOX Spam | Outputs anti-cheat humor lines. (You won't get VAC banned!) |
 
-Note: The demos will be stored in `tf\demo_[class]`. The [class] is the class thet you're playing. Also, if you make a bookmark, it'll say `Bookmark: [Class]`.
+## Demo Recording System
+
+The configuration includes an advanced demo recording system with the following features:
+
+- **Automatic Organization**: Demos are stored in class-specific folders: `tf\demos_scout`, `tf\demos_pyro`, etc.
+- **Smart Recording**: Only records when you get kill streaks (minimum 20 kills by default)
+- **Auto-deletion**: Automatically deletes old demos to save space
+- **Bookmarking**: Use `'` (apostrophe) to bookmark important moments during recording
+- **Customizable Settings**: Demo prefix set to "Tvde1", kill delay of 2.5 seconds
+
+Demo files are named with the format: `[prefix]_[class]_[date]_[time].dem`
+Bookmarks will show as: `Bookmark: [Class]` in the demo
+
+### Demo Controls:
+| Button | Function |
+| --- | --- |
+| F3 | Start recording a demo |
+| Shift + F3 | Stop recording a demo |
+| ' | Add bookmark during recording |
 
 #### Numpad voice commands:
 Press these key on your numpad to send insults/taunts in chat. It'll automatically rebind them to a diffrent one.  
@@ -150,9 +172,25 @@ When you press 4 or 5 to show an uber pop, press 1-9 to show the class they've p
 ##### Insulting/Joking
 | Button(s) | Function | Extras |
 | --- | --- | --- |
-| / | LMAOBOX Spam | Push these for a LMAOBOX spam line. (You won't get vac'ed!) |
-| * | Insults | Push these when someone is mad. These are whole centances. |
-| - | Jokes | These are just nice TF2 related jokes. |
+| KP_SLASH (/) | LMAOBOX Spam | Anti-cheat humor lines. (You won't get VAC banned!) |
+| KP_MULTIPLY (*) | Insults | Cycles through 10 different insult lines each press. |
+| KP_MINUS (-) | Jokes | Cycles through 19 different TF2-related jokes each press. |
+
+## Humor & Chat System
+
+The configuration includes an extensive chat system with over 100 pre-written responses:
+
+### Trashtalk System
+- **Class-specific responses**: Different trashtalk lines for each class you're playing
+- **Automatic cycling**: Each press of the numpad keys gives you a different response
+- **Educational commands**: Special aliases like `howmute` and `howtosurf` to help new players
+
+### Chat Categories:
+1. **Insults** (KP_MULTIPLY): 10 rotating insult lines
+2. **Jokes** (KP_MINUS): 19 TF2-themed jokes that cycle
+3. **LMAOBOX Spam** (KP_SLASH): Anti-cheat humor (safe to use)
+4. **Class Trashtalk**: Specific responses based on your current class
+5. **Educational**: Helpful commands for teaching game mechanics
 
 Examples:  
 If I'd press `KP 0` (Enemy down commands) and then `KP 4` (demoman), in the team chat "Enemy demoman down!" will appear.  
@@ -171,17 +209,19 @@ Or if I'd press `KP ENTER` (other commands) and then `KP 5` and then `KP_4`, it 
 #### Soldier:
 | Button(s) | Function | Extras |
 | --- | --- | --- |
+| Mouse 5 | Melee chain | Advanced melee weapon chain script for quick switching. |
 
 #### Pyro:
 | Button(s) | Function | Extras |
 | --- | --- | --- |
 | Mouse 2 | Airblast | It'll switch to your flamethrower and airblast. |
-| SHIFT + Mouse 2 | Flare airblast | Swaps to the flare gun after you ariblast. |
+| SHIFT + Mouse 2 | Flare airblast | Swaps to the flare gun after you airblast. |
 | Mouse 5 | Viewmodel off | Click this to turn the flamethrower viewmodel (and flames) on/off. | 
 
 #### Demoman:
 | Button(s) | Function | Extras |
 | --- | --- | --- |
+| Mouse 5 | Viewmodel toggle | Toggles weapon viewmodels on/off for better visibility. |
 
 #### Heavy:
 | Button(s) | Function | Extras |
@@ -189,6 +229,7 @@ Or if I'd press `KP ENTER` (other commands) and then `KP 5` and then `KP_4`, it 
 | Mouse 5 | Throw sandvich | Hold it to throw the sandvich (on the ground or to a player) and let go if it's thrown. |
 | Shift + Mouse 5 | Eat sandvich | Hold to eat sandvich. You can let go if you're eating. |
 | Q | Pootispow | Press it. It will pootispow. |
+| O | Pootis Pow | Alternative Pootis Pow command. |
 | P | Pootis Spam | Spam it while **in spawn** to keep saying pootis. |
 
 #### Engineer:
@@ -218,17 +259,18 @@ Also, you will say "Dammit!" every time you use left mouse button.
 #### Sniper:
 | Button(s) | Function | Extras |
 | --- | --- | --- |
+| Mouse 2 | Semi-auto scope | Hold for continuous scoping without having to click repeatedly. |
 
 You will say "nice shot!" every time you attack.
 
-####Spy:
+#### Spy:
 
 | Button(s) | Function | Extras |
 | --- | --- | --- |
 | Mouse 1 | Attack | |
-| Mouse 2 | Secondary attack. | Uses invisi watch or dead ringer. It will turn on the viewmodel if you have equpped the revolver. It will also turn the viewmodel off again after undeploying it if you still have the revolver equipped. |
+| Mouse 2 | Secondary attack. | Uses invisi watch or dead ringer. It will turn on the viewmodel if you have equipped the revolver. It will also turn the viewmodel off again after undeploying it if you still have the revolver equipped. |
 | Mousewheel up | Equip primary | Equips primary weapon and removes viewmodel. Using any other weapon will show the viewmodel again. |
-| Mouswheel down | Equip knife | |
+| Mousewheel down | Equip knife | |
 | Mouse 3 | Use the disguise menu. | Use 'R' to swap between teams. |
 | Mouse 5 | Sap-o-matic | Hold this to bring out your sapper and start sapping. Let go of it to return to your knife. |
 | Shift + Mouse 5 | Lastdisguise | Use this to disguise again, or change the weapon your disguise is holding. |
@@ -242,16 +284,70 @@ Note: If the viewmodels are not being hidden, look at spy.cfg. I have explained 
 | `walkway` | Loads the tr_walkway map and executes some commands to make it work. |
 | `aim` | Same as above, but then with the map tr_aim. |
 | `aim_training` | Same as above, but then with the map tr_aim_training. |
-| `comp_g` | Switches to my comp graphics config. |
-| `good_g` | Uses my good graphics config. Usually for playing pubs. This is the default one. |
-| `ultra_g` | Swtiches to the ultra graphics. Not advised unless you have a good pc. |
+| `rockettraining` | Loads tr_rocket_shooting2 for rocket jumping practice. |
+| `comp_g` | Switches to competitive graphics config (minimal settings for maximum FPS). |
+| `good_g` | Uses high-quality graphics config. Usually for playing pubs. This is the default. |
+| `gfx` | Cinema/video recording config (Comanglia's settings) for content creation. |
+| `tvde1sg` | Tvde1's high-quality graphics variant with custom tweaks. |
+| `laptop` | Laptop-optimized settings for lower-end hardware. |
+| `maxfps` | Maximum FPS config with network optimizations for competitive play. |
+| `normalfps` | Standard FPS config with balanced network settings. |
 
-Changing graphics, can (and will) freze your game. But only when changing to `good` or `ultra`.
+## Graphics Configuration System
+
+The configuration includes 7 different graphics presets for various use cases:
+
+### Available Graphics Configs:
+1. **comp_graphics.cfg** - Competitive minimal settings for maximum FPS and visibility
+2. **good_graphics.cfg** - High-quality settings for casual play (default)
+3. **gfx.cfg** - Cinema/recording quality using Comanglia's config
+4. **tvde1sgraphics.cfg** - Tvde1's custom high-quality variant
+5. **laptop.cfg** - Optimized for laptop/lower-end hardware
+6. **maxfps.cfg** - Maximum performance with network optimizations
+7. **normalfps.cfg** - Balanced performance with standard network settings
+
+### Network Settings Included:
+Each graphics config includes optimized network settings:
+- **Competitive configs**: `cl_cmdrate 66`, `cl_interp 0` for minimal delay
+- **Quality configs**: Balanced interp/rate settings for smooth gameplay
+- **Performance configs**: Aggressive network optimization for competitive advantage
+
+**Warning**: Changing graphics configs can (and will) freeze your game temporarily, especially when switching to higher quality settings.
+
+## Audio & HUD Customization
+
+### Hitsound System:
+The configuration includes customized hitsound settings:
+- **Damage-scaled pitch**: Hitsound pitch changes based on damage dealt
+- **Custom volume**: Optimized hitsound volume for competitive play
+- **Dingaling settings**: Fine-tuned for better audio feedback
+
+### HUD Modifications:
+- **Simple disguise menu**: `tf_simple_disguise_menu 1` for easier spy disguising
+- **Mouse scoreboard**: `tf_scoreboard_mouse_mode 2` for clickable scoreboard
+- **Ping as text**: Shows numerical ping values instead of bars
+- **Auto-rezoom disabled**: Prevents automatic scope-in after shooting as Sniper
+- **Class auto-kill disabled**: Prevents automatic class switching on death
+- **Medic autocaller threshold**: Adjustable threshold for automatic medic calls
+
+## Advanced Scripting Features
+
+### Null-Movement Script:
+Prevents input conflicts when pressing opposite movement keys simultaneously (W+S, A+D). Located in `tweaks/nullmovement.cfg`.
+
+### Crouchjump Script:
+Advanced air-strafing script that handles crouch-jumping with proper timing. Located in `tweaks/crouchjump.cfg`.
+
+### Autocall System:
+Intelligent medic calling system that detects server settings and adjusts behavior accordingly.
+
+### Regen Script:
+Offline practice script (`regen.cfg`) that enables cheats for training scenarios.
+
+### Spectator Controls:
+Custom spectator bindings for demo reviews and competitive match watching.
 
 ## Final words.
 Feel free to edit this to your own liking. But please refer to me (and this page) if you will upload this code somewhere.
 Message me if you encounter any bugs, I'd be glad to help and fix it. You can also message me if you know any improvements.  
 Also, check out [my youtube channel](https://www.youtube.com/user/1tvde1) for some cool TF2 videos! (Mostly spy frags and fun related.)
-
-#### P.S.
-You can bind a lenny face to KP_PLUS (the plus on the numpad). It won't unbind it.
